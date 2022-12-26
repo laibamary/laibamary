@@ -1,0 +1,83 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+ {
+  char a;
+  // clrscr();
+  cout << "\n Information about the game \n";
+  cout << "\n In this game you have three things that is Grass,Goat and Lion.There are two points that are point A and Point B.In the middle of these points there is river.You have to take these things one by one to cross the river between the point ";
+  cout << "\n Rules of the Game\n";
+  cout << " \n 1 keep in mind that never left those things that eat each other.For example if you left grass and goat at on side.Goat will eat the grass.\n ";
+  cout << " \n 2 There is two way in the game.It means that if you take something from point A to point B so while on the same time ypu can take another thing from point B to point A.\n";
+  cout << " \n 3 if something is eaten by someone the game will over \n";
+
+  cout << "\n Choose the following options carefully to continue the game and to proceed for mext to step \n";
+  cout << "\n (A) Man is at point A and he picks grass from point A and move to point B while remaing goat and lion on the point A \n";
+  cout << "\n (B) Man is at point A and he picks Goat from point A and to point B while Grass and Lion remaining at point A\n";
+  cout << "\n (C) Man is at point A and he picks Lion from point A and move to point B while remaining Grass and Goat at point A\n";
+  cout << " Please enter A,B or C to choose the options \n ";
+  cin >> a;
+
+  if (a == 'A') 
+  {
+    cout << "\n Failed to move next.Lion eat the Goat.Game is overn\n";
+  } 
+  else if (a == 'B') 
+  {
+    cout << "\n Congratulations!Your answer is right.You moved to next step.Now man comes back to poitn A now \n ";
+    cout << "\n Now again choose the following options to continue next \n";
+    cout << "\n (A) Man picks grass from point A and move to point B while again move from point B to point A with Goat\n";
+    cout << "\n (B) Man picks lion form point A and move to point B while again move from point B to point A with Goat\n";
+    cout << "\n (C) both (A) & (B) are the right answer ";
+    cout << " Please enter A,B or C to choose the options \n ";
+    cin >> a;
+    if(a == 'A') 
+    {
+        cout << "Congratulations!Your answer is right.You moved to next step.Now man comes back to poitn A now/n ";
+        cout << "\n Now again choose the following options to continue next /n";
+        cout << "\n (A) Now man picks lion from point A to point B\n";
+        cout << "\n (B) both (A) & (C) are the right answer\n";
+        cout << "\n (C) Now man picks Goat from point A to point B";
+        cout << "Please enter A,B or C to choose the options \n";
+        cin >> a;
+    }
+    if (a == 'A')
+    {
+        cout << "Congratulations!Your answer is right.You moved to next step.Now man comes back to poitn A now/n ";
+        cout << "\n Now again choose the following options to continue next /n";
+        cout << "\n (A) He picks lion from point B to point A \n";
+        cout << "\n (B) He picks Goat from point A to point B snd then cross the river \n";
+        cout << "\n (C) both (A) & (C) are the right answer \n ";
+        cout << "Please enter A,B or C to choose the options \n";
+        cin >> a; 
+        if (a == 'A')
+        {
+            cout << "Failed to move next.Game is overn\n";
+        }
+        else if (a == 'B')
+        {
+            cout << "Congratulations!Your answer is right.Hurray! You win the game/n ";
+        } 
+        else if (a == 'C') 
+        {
+            cout << "Failed to move next.Game is overn\n";
+      
+        } 
+    }
+     else if (a == 'B')
+    {
+      cout << "Failed to move next.Lion eat the Goat.Game is overn\n";
+    } 
+    else if (a == 'C')
+    {
+      cout << "Failed to move next.Game is overn\n";
+    }
+  }
+
+    else if (a == 'C')
+    {
+        cout << "Failed to move next.Goat eat the grass.Game is overn\n";
+    }
+}
